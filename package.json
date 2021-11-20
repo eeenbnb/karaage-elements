@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-hashing=none && cat docs/karaage-elements/polyfills.js > docs/index.js && cat docs/karaage-elements/runtime.js >> docs/index.js && cat docs/karaage-elements/main.js >> docs/index.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -14,10 +14,12 @@
     "@angular/common": "~13.0.0",
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
+    "@angular/elements": "^13.0.2",
     "@angular/forms": "~13.0.0",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "ngx-markdown": "^13.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
