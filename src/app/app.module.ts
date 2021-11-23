@@ -26,7 +26,8 @@ import { ListParentComponent } from './components/list-parent/list-parent.compon
     ListChildComponent,
     ListParentComponent,
   ],
-  imports: [BrowserModule, MarkdownModule.forRoot(), RouterModule],
+  imports: [BrowserModule, MarkdownModule.forRoot(), RouterModule.forRoot([])],
+  exports: [RouterModule],
   providers: [],
 })
 export class AppModule {
