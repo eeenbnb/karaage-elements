@@ -1,6 +1,5 @@
 import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { createCustomElement } from '@angular/elements';
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -26,8 +25,7 @@ import { ListParentComponent } from './components/list-parent/list-parent.compon
     ListChildComponent,
     ListParentComponent,
   ],
-  imports: [BrowserModule, MarkdownModule.forRoot(), RouterModule.forRoot([])],
-  exports: [RouterModule],
+  imports: [BrowserModule, MarkdownModule.forRoot()],
   providers: [],
 })
 export class AppModule {
